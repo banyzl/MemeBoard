@@ -1,0 +1,24 @@
+# Dependencies and build products
+node_modules/
+.build/
+.swiftpm/
+dist/
+
+# Generated Raycast assets and type definitions
+raycast-extension/assets/memeboard-helper
+raycast-extension/assets/meme_tips.lua
+raycast-extension/assets/test.png
+raycast-extension/raycast-env.d.ts
+
+# Local diagnostics
+spikes/pasteboard
+spikes/rime-spike
+spikes/decode
+spikes/permissions
+*.log
+.DS_Store
+
+# Local settings and credentials
+.env
+.env.*
+!.env.example

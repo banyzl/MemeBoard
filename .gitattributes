@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.gif binary
+*.webp binary
+spikes/rime_api.h linguist-vendored
+
+*.md whitespace=-blank-at-eol

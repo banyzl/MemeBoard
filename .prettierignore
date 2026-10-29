@@ -1,0 +1,9 @@
+**/node_modules/**
+**/.build/**
+**/dist/**
+raycast-extension/assets/**
+raycast-extension/raycast-env.d.ts
+raycast-extension/package-lock.json
+docs/项目说明.md
+third_party/**
+spikes/rime_api.h

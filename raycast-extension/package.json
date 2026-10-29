@@ -1,0 +1,75 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "memeboard",
+  "title": "MemeBoard",
+  "description": "Local meme search and Rime image tips",
+  "icon": "extension-icon.png",
+  "author": "luchen",
+  "license": "MIT",
+  "categories": [
+    "Productivity"
+  ],
+  "commands": [
+    {
+      "name": "search-memes",
+      "title": "Search Memes",
+      "description": "搜索与粘贴本地表情包",
+      "mode": "view"
+    },
+    {
+      "name": "add-meme",
+      "title": "Add Meme",
+      "description": "导入本地表情包",
+      "mode": "view"
+    },
+    {
+      "name": "install-rime",
+      "title": "Install / Repair Rime Integration",
+      "description": "安装或修复万象拼音图片提示",
+      "mode": "view"
+    },
+    {
+      "name": "spike-paste",
+      "title": "MemeBoard: Test QQ Image Paste",
+      "description": "诊断 QQ 文件粘贴兼容性",
+      "mode": "view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "2.9.0",
+    "pinyin-pro": "3.27.0",
+    "react": "19.0.0",
+    "yaml": "2.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.15.30",
+    "@types/react": "19.0.10",
+    "prettier": "3.9.10",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3"
+  },
+  "scripts": {
+    "build": "ray build",
+    "dev": "ray develop",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test ../tests/*.test.ts",
+    "prepare-assets": "../scripts/prepare-assets.sh",
+    "install-rime": "node --import tsx ../scripts/manage-integration.ts install",
+    "uninstall-rime": "node --import tsx ../scripts/manage-integration.ts uninstall",
+    "format": "prettier --write src ../tests/core.test.ts ../scripts/*.ts package.json tsconfig.json ../*.md ../.github/workflows/*.yml ../shared/schema/*.json ../rime/*.yaml ../.prettierrc.json",
+    "format:check": "prettier --check src ../tests/core.test.ts ../scripts/*.ts package.json tsconfig.json ../*.md ../.github/workflows/*.yml ../shared/schema/*.json ../rime/*.yaml ../.prettierrc.json"
+  },
+  "preferences": [
+    {
+      "name": "rimeDirectory",
+      "title": "Rime Directory",
+      "description": "鼠须管用户配置目录，留空使用 ~/Library/Rime",
+      "type": "directory",
+      "required": false
+    }
+  ],
+  "version": "0.1.1",
+  "engines": {
+    "node": ">=22"
+  }
+}

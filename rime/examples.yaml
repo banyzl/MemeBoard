@@ -1,0 +1,7 @@
+# Merge into existing wanxiang.custom.yaml under its existing patch key.
+# Do not copy numeric positions from another installation.
+# Run Install / Repair Rime Integration to compute processor insertion positions.
+patch:
+  memeboard:
+    meme_key: comma
+    fallback_key: semicolon
